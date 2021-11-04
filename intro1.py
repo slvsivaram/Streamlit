@@ -14,7 +14,7 @@ conn = connect()
 #    rows = conn.execute(query, headers=1)
 #    return rows
 
-sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=1393963821"
+sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit?usp=sharing"
 rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
 st.write(df)
