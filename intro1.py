@@ -1,7 +1,7 @@
 # streamlit_app.py
 
 import streamlit as st
-import gsheetsdb
+import pandas as pd
 from gsheetsdb import connect
 
 # Create a connection object.
@@ -15,8 +15,10 @@ def run_query(query):
     return rows
 
 sheet_url = st.secrets["https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=1393963821"]
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
+rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
+df = pd.DataFrame(rows)
+st.write(df)
 
 # Print results.
-for row in rows:
-    st.write(f"{row.BA} has a :{row.Q1}:")
+#for row in rows:
+#    st.write(f"{row.BA} has a :{row.Q1}:")
