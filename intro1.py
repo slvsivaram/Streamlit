@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 # gsheetsdb
-from gsheetdb import connect
+from gsheetsdb import connect
 
 # Create a connection object.
 
