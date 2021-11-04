@@ -19,7 +19,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tS
 
 conn = connect()
 
-rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
+rows = conn.execute(f'SELECT * FROM "{sheet_url}"',headers=1)
 df = pd.DataFrame(rows)
 st.write(df)
 
