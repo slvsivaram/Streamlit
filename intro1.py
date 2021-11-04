@@ -15,7 +15,7 @@ from gsheetsdb import connect
 #    rows = conn.execute(query, headers=1)
 #    return rows
 
-sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit?usp=sharing"
+sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=882222373"
 
 conn = connect()
 
