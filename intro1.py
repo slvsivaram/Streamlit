@@ -1,6 +1,7 @@
 # streamlit_app.py
 
 import streamlit as st
+import gsheetsdb
 from gsheetsdb import connect
 
 # Create a connection object.
