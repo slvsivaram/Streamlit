@@ -21,6 +21,7 @@ conn = connect()
 
 rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
+st.title ("RE BE")
 st.write(df)
 
 # Print results.
