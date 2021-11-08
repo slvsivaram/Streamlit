@@ -14,15 +14,22 @@ from gsheetsdb import connect
 #def run_query(query):
 #    rows = conn.execute(query, headers=1)
 #    return rows
-
+conn = connect()
 sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=882222373"
 
-conn = connect()
 
 rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
 st.title ("RE BE")
 st.write(df)
+
+sheet_url1 = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=1393963821"
+
+
+rows = conn.execute(f'SELECT * FROM "{sheet_url1}"')
+df1 = pd.DataFrame(rows)
+st.title ("Ojas Target")
+st.write(df1)
 
 # Print results.
 #for row in rows:
