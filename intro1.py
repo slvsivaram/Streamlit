@@ -21,6 +21,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tS
 rows = conn.execute(f'SELECT * FROM "{sheet_url}"')
 df = pd.DataFrame(rows)
 st.title ("RE BE")
+
 st.write(df)
 
 sheet_url1 = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5tSbaDRyFUU9PaGtUIY/edit#gid=1393963821"
@@ -29,6 +30,9 @@ sheet_url1 = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5t
 rows = conn.execute(f'SELECT * FROM "{sheet_url1}"')
 df1 = pd.DataFrame(rows)
 st.title ("Ojas Target")
+option = st.selectbox(
+...     'Select SSA',
+...     ('Email', 'Home phone', 'Mobile phone'))
 st.write(df1)
 
 # Print results.
