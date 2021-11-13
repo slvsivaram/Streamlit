@@ -34,7 +34,7 @@ option = st.sidebar.selectbox('Select SSA',df1.BA)
 df1.set_index("BA", inplace = True)
   
 
-result = df.loc[[option]]
+result = df1.loc[[option]]
 
 st.write( result)
 st.write(df1)
