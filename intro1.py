@@ -31,7 +31,7 @@ rows = conn.execute(f'SELECT * FROM "{sheet_url1}"')
 df1 = pd.DataFrame(rows)
 st.title ("Ojas Target")
 option = st.sidebar.selectbox('Select SSA',df1.BA)
-st.write( 'selected',df1.iloc[option])
+st.write( 'selected',df1.iloc[2])
 st.write(df1)
 
 # Print results.
