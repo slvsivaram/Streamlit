@@ -37,7 +37,7 @@ df1.set_index("BA", inplace = True)
 result = df1.loc[[option]]
 
 st.write( result)
-st.write(df1)
+# st.write(df1)
 
 # Print results.
 #for row in rows:
