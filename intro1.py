@@ -30,14 +30,14 @@ sheet_url1 = "https://docs.google.com/spreadsheets/d/1XBGtUKORl0QBaUXeshFhNAMj5t
 rows = conn.execute(f'SELECT * FROM "{sheet_url1}"')
 df1 = pd.DataFrame(rows)
 st.title ("Ojas Target")
-option = st.sidebar.selectbox('Select SSA',df1.BA)
+option = st.sidebar.selectbox('Select BA',df1.BA)
 df1.set_index("BA", inplace = True)
   
 
 result = df1.loc[[option]]
 
 st.write( result)
-# st.write(df1)
+st.write(df1)
 
 # Print results.
 #for row in rows:
