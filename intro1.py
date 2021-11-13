@@ -34,7 +34,7 @@ st.title ("Ojas Target")
 option = st.sidebar.selectbox('Select BA',df1.BA)
 df1.set_index("BA", inplace = True)
 result = df1.loc[[option]]
-st.write( result1)
+st.write( result)
 
 option1 = st.sidebar.selectbox('Select Qtr',("Q1","Q2","Q3","Q4") )
 df2 = pd.DataFrame(rows)
