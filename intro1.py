@@ -41,8 +41,10 @@ df2 = pd.DataFrame(rows)
 result1 = df2[["BA",option1]]
 st.write( result1)
 
+Ojas Target = st.sidebar.button('Ojas Target')
+if st.button('Ojas Target'):
+    st.write(df1)
 
-st.write(df1)
 
 # Print results.
 #for row in rows:
