@@ -46,6 +46,8 @@ st.write( result1)
 if st.sidebar.button('Ojas Target'):
     st.write(df1)
 st.line_chart(df1)
+df4 = df1[["BA","Total"]]
+st.line_chart(df4)
 
 # Print results.
 #for row in rows:
