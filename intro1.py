@@ -41,13 +41,13 @@ option1 = st.sidebar.selectbox('Select Qtr',("Q1","Q2","Q3","Q4") )
 df2 = pd.DataFrame(rows1)
 result1 = df2[["BA",option1]]
 st.write( result1)
-st.line_chart(df2)
+#st.line_chart(df2)
 
 #Ojas_Target = st.sidebar.button('Ojas Target')
 if st.sidebar.button('Ojas Target'):
     st.write(df1)
 st.line_chart(df1)
-df4 = df2[["BA","Total"]]
+#df4 = df2[["BA","Total"]]
 
 
 # Print results.
